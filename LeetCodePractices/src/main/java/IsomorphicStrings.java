@@ -13,9 +13,9 @@ public class IsomorphicStrings {
         boolean result = true;
 
         for (int i = 0; i < s.length(); ++i) {
-            System.out.println(firstString[i] + " : " + secondString[i]);
-            System.out.println(lookupTable.containsKey(firstString[i]));
-            System.out.println(lookupTable.containsValue(secondString[i]));
+            //System.out.println(firstString[i] + " : " + secondString[i]);
+            //System.out.println(lookupTable.containsKey(firstString[i]));
+            //System.out.println(lookupTable.containsValue(secondString[i]));
             if (lookupTable.get(firstString[i]) != null && (lookupTable.get(firstString[i]) != secondString[i])) {
                 System.out.println("Breaking...");
                 result = false;
@@ -26,7 +26,7 @@ public class IsomorphicStrings {
                 result = false;
                 break;
             }
-            System.out.println("Continuing");
+            //System.out.println("Continuing");
             lookupTable.put(firstString[i], secondString[i]);
             reverseLookupTable.put(secondString[i], firstString[i]);
         }
